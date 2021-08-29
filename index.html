@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <title>실시간 날씨 정보 받아오기</title>
 </head>
 <body>
@@ -97,9 +97,9 @@
             var time =new Date(data.dt*1000);
             weather.innerHTML += time + " ";
             weather.innerHTML += data.name + " ";
-            weather.innerHTML += data.sys.country + " ";
-            weather.innerHTML += data.main.temp + "도 ";
-            weather.innerHTML += `<img src='http://openweathermap.org/img/wn/${data.weather[0].icon}.png'>`;
+            // weather.innerHTML += data.sys.country + " ";
+            // weather.innerHTML += data.main.temp + "도 ";
+            // weather.innerHTML += `<img src='http://openweathermap.org/img/wn/${data.weather[0].icon}.png'>`;
         });
 
         //서버에서 클라이언트로 데이터 가져오기
