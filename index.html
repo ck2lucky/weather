@@ -93,29 +93,30 @@
         // });
 
         // 현재 날씨
-        // $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1841066&appid=02a146d88b51a0a88235d8a46514d112&units=metric',function(data){
-        //     var time =new Date(data.dt*1000);
-        //     weather.innerHTML += time + " ";
-        //     weather.innerHTML += data.name + " ";
-        //     weather.innerHTML += data.sys.country + " ";
-        //     weather.innerHTML += data.main.temp + "도 ";
-        //     weather.innerHTML += `<img src='http://openweathermap.org/img/wn/${data.weather[0].icon}.png'>`;
-        // });
-
-        var requestURL = 'http://api.openweathermap.org/data/2.5/weather?id=1841066&appid=02a146d88b51a0a88235d8a46514d112&units=metric';
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', requestURL);
-        xhr.responseType='json';
-        xhr.onload = function() {
-            var data = xhr.response;
+        $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1841066&appid=02a146d88b51a0a88235d8a46514d112&units=metric',function(data){
             var time =new Date(data.dt*1000);
             weather.innerHTML += time + " ";
             weather.innerHTML += data.name + " ";
             weather.innerHTML += data.sys.country + " ";
             weather.innerHTML += data.main.temp + "도 ";
             weather.innerHTML += `<img src='http://openweathermap.org/img/wn/${data.weather[0].icon}.png'>`;
-        };
-        xhr.send();
+        });
+
+        //서버에서 클라이언트로 데이터 가져오기
+        // var requestURL = 'http://api.openweathermap.org/data/2.5/weather?id=1841066&appid=02a146d88b51a0a88235d8a46514d112&units=metric';
+        // var xhr = new XMLHttpRequest();
+        // xhr.open('GET', requestURL);
+        // xhr.responseType='json';
+        // xhr.onload = function() {
+        //     var data = xhr.response;
+        //     var time =new Date(data.dt*1000);
+        //     weather.innerHTML += time + " ";
+        //     weather.innerHTML += data.name + " ";
+        //     weather.innerHTML += data.sys.country + " ";
+        //     weather.innerHTML += data.main.temp + "도 ";
+        //     weather.innerHTML += `<img src='http://openweathermap.org/img/wn/${data.weather[0].icon}.png'>`;
+        // };
+        // xhr.send();
     </script> 
      
 </body>
